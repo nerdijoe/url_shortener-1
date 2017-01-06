@@ -1,0 +1,11 @@
+
+<%= form_for @url do |f| %>
+  <%= f.label :long_url, "Enter your URL" %>
+  <%= f.text_field :long_url %>
+  <%= f.submit "Make it Short" %>
+<% end %>
+
+
+<p>
+  <%= @url.short_url %>
+</p>

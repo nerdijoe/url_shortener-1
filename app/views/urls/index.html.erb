@@ -11,8 +11,8 @@
 
  <% @urls.each do |url| %>
 		<tr class="clickable">
-			<td> <%= url.long_url %></td>
-			<td> <a href="<%=url.short_url%>"> <%= url.short_url%></a></td>
+			<td> <%= link_to url.long_url, url_path(url) %> </td>
+			<td> <a href="<%= url.short_url %>"> <%= url.short_url%></a></td>
 		</tr>
 	<%end %>
 	</table>
