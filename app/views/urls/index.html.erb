@@ -1,0 +1,20 @@
+
+<%= link_to "Short it", new_url_path  %>
+
+<div id="table_container">
+	<table id="table_url">
+
+		<tr>
+			<th class="col_link"></th>
+			<th class="col_pendekar"></th>
+		</tr>
+
+ <% @urls.each do |url| %>
+		<tr class="clickable">
+			<td> <%= url.long_url %></td>
+			<td> <a href="<%=url.short_url%>"> <%= url.short_url%></a></td>
+		</tr>
+	<%end %>
+	</table>
+
+</div> <!--end of table container-->
